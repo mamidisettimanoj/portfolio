@@ -386,6 +386,11 @@ section,.divider,footer{position:relative;z-index:1}
 @media print{.cube-wrap,.gallery,.hero-dots,#gallery{display:none!important}.mod:not([open])>.mod-tags{display:flex}}
 @media(prefers-reduced-motion:reduce){.cube{animation:none}.photo-flipper{transition:none}}
 
+
+.nav-logo{display:inline-flex;align-items:center;gap:.65rem;font-family:'Inter',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:-.02em;color:var(--text)}
+.nav-logo:hover{color:var(--text)}
+.logo-mark{width:32px;height:32px;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.95rem;color:var(--on-accent);background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 6px 18px -6px var(--accent)}
+@media(max-width:340px){.logo-name{display:none}}
 </style>
 </head>
 <body>
@@ -394,12 +399,11 @@ section,.divider,footer{position:relative;z-index:1}
 
 <!-- NAV -->
 <nav>
-  <span class="nav-logo">manoj.dev</span>
+  <a href="#home" class="nav-logo" aria-label="Manoj Mamidisetti, home"><span class="logo-mark">M</span><span class="logo-name">Manoj Mamidisetti</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
-    <li><a href="#semester">Semester 4</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#academics">Academics</a></li>
     <li><a href="#coding">Profiles</a></li>
@@ -717,30 +721,33 @@ section,.divider,footer{position:relative;z-index:1}
       <div class="project-card">
         <div class="project-header">
           <div>
-            <div class="project-name">Student Career &amp; Verification Platform</div>
-            <div class="project-type">Full-Stack · Edu-Tech · Recruiter Tool</div>
+            <div class="project-name">PlacementHire</div>
+            <div class="project-type">Full-Stack · Edu-Tech · AI · Recruiter Platform</div>
           </div>
-          <span class="project-status status-building">⟳ Building</span>
+          <span class="project-status status-live">● Live</span>
         </div>
-        <p class="project-desc">A centralized ecosystem connecting students, colleges, faculty, and recruiters. Provides college-verified profiles, certificate authentication, AI-generated faculty notes, and placement readiness tools — making student credentials trustworthy for recruiters.</p>
+        <p class="project-desc">A campus placement platform connecting students, colleges, faculty, and recruiters. Students build college-verified profiles, institutions approve certificates, recruiters manage candidates and applications, and AI guides students toward placement readiness — making credentials trustworthy for everyone involved.</p>
         <div class="project-features">
-          <div class="project-features-title">Planned Features</div>
+          <div class="project-features-title">Key Highlights</div>
           <ul class="project-feature-list">
-            <li>College-level institutional verification badges</li>
-            <li>QR-based certificate authentication</li>
-            <li>AI-generated faculty notes (Gemini / OpenAI)</li>
-            <li>ERP attendance integration</li>
-            <li>Role-based dashboards: Student, Recruiter, College, Faculty</li>
+            <li>Five roles with server-side authorization: Student, Recruiter, Faculty, College Admin, Platform Admin</li>
+            <li>Institution-approved certificate verification</li>
+            <li>Job eligibility engine &amp; application tracking: Applied → Shortlisted → Selected</li>
+            <li>“Hire” AI assistant (Gemini) and PlacementPredict ML classifier</li>
+            <li>Job recommendations &amp; placement analytics</li>
           </ul>
         </div>
         <div class="project-stack">
-          <span class="stack-tag">Full-Stack</span>
-          <span class="stack-tag">AI APIs</span>
+          <span class="stack-tag">Next.js</span>
+          <span class="stack-tag">React</span>
+          <span class="stack-tag">TypeScript</span>
           <span class="stack-tag">PostgreSQL</span>
-          <span class="stack-tag">Role-Based Auth</span>
+          <span class="stack-tag">Prisma</span>
+          <span class="stack-tag">Gemini AI</span>
+          <span class="stack-tag">pnpm Monorepo</span>
         </div>
         <div class="project-links">
-          <span class="project-link ghost" style="cursor:default;opacity:0.6">⟳ In Development</span>
+          <a href="https://placementhire.tech" target="_blank" rel="noopener" class="project-link primary">↗ Live Site</a>
         </div>
       </div>
     </div>
